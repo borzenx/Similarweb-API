@@ -2,7 +2,7 @@
 import { useSearchParams } from 'next/navigation';
 import React from 'react';
 
-const Website = () => {
+const test = () => {
     const searchParams = useSearchParams();
     const website = searchParams.get('q');
 
@@ -13,5 +13,5 @@ const Website = () => {
     );
 };
 
-export default Website;
+export default test;
 
