@@ -18,7 +18,7 @@ export default function SearchPage() {
                 const jsonData = await response.json();
                 setData(jsonData);
             } catch (error) {
-                setError(error.message);
+                console.log(error);
             }
         };
 
