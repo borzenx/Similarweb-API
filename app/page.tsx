@@ -9,7 +9,7 @@ const Home = () => {
   const handleSubmit = (e: any) => {
     e.preventDefault();
     // Redirect to the desired URL with the query parameter
-    router.push(`/website?q=${query}`);
+    router.push(`/test?q=${query}`);
   };
 
   const handleInputChange = (e:any) => {
