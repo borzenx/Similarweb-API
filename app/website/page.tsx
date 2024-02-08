@@ -16,9 +16,8 @@ const Website = () => {
                 }
                 const jsonData = await response.json();
                 setData(jsonData);
-            }
-            catch{
-                console.log('erorr');
+            } catch (error) {
+                console.error('Error fetching data:', error);
             }
         };
 
@@ -27,12 +26,16 @@ const Website = () => {
         }
     }, [website]);
 
-
     return (
         <div>
-            gf
+            {data ? (
+                <h1>Data: {JSON.stringify(data)}</h1>
+            ) : (
+                <p>Loading...</p>
+            )}
         </div>
     );
 };
 
 export default Website;
+
