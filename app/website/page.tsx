@@ -4,7 +4,6 @@ import React, { useState, useEffect } from 'react';
 
 const Website = () => {
     const [data, setData] = useState(null);
-    const [error, setError] = useState(null);
     const searchParams = useSearchParams();
     const website = searchParams.get('q');
 
@@ -27,20 +26,12 @@ const Website = () => {
         }
     }, [website]);
 
-    if (error) {
-        return <div>Error: {error}</div>;
-    }
 
     return (
         <>
-            {data ? (
-                <div>
-                    <h1>{data}</h1>
-                    {/* Render other data fields as needed */}
-                </div>
-            ) : (
-                <div>Loading...</div>
-            )}
+        <div>
+            <h1>{data}</h1>
+        </div>
         </>
     );
 }
